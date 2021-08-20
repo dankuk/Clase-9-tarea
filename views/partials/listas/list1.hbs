@@ -1,0 +1,17 @@
+<h2>Listado</h2>
+{{#if existe}}
+<table class="table"> 
+  <thead><tr><td>id</td><td>title</td><td>price</td><td>thumbnail</td></tr></thead>
+    {{#each data}}
+      <tr scope="row">
+        <td>{{this.id}}</td>
+        <td>{{this.title}}</td>
+        <td>{{this.price}}</td>
+        <td><img src="{{this.thumbnail}}" style="width: 64px; height: 64px;"/></td>
+      </tr>
+    {{/each}}
+</table>
+{{/if}}
+{{#if noexiste}}
+  <h2>No existen productos</h2>
+{{/if}}
